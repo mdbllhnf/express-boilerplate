@@ -1,0 +1,15 @@
+{
+    "name": "express-boilerplate",
+    "version": "0.0.1",
+    "description": "A fast and robust ExpressJS boilerplate for building highly scalable APIs.",
+    "keywords": [
+        "boilerplate",
+        "api",
+        "restful",
+        "restful-api",
+        "express",
+        "express-js"
+    ],
+    "author": "mdbllhnf",
+    "license": "MIT"
+}
