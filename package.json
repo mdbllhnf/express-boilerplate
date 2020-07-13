@@ -11,5 +11,17 @@
         "express-js"
     ],
     "author": "mdbllhnf",
-    "license": "MIT"
+    "license": "MIT",
+    "main": "index.js",
+    "scripts": {
+        "dev": "nodemon -r dotenv/config .",
+        "start": "node -r dotenv/config ."
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.4"
+    },
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1"
+    }
 }
