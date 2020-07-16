@@ -25,12 +25,16 @@
         "dotenv": "^8.2.0",
         "express": "^4.17.1",
         "module-alias": "^2.2.2",
+        "winston": "^3.3.3",
+        "winston-daily-rotate-file": "^4.5.0",
         "yargs": "^15.4.1"
     },
     "_moduleAliases": {
         "@configs": "./configs",
         "@controllers": "./controllers",
+        "@logs": "./logs",
         "@middlewares": "./middlewares",
-        "@routers": "./routers"
+        "@routers": "./routers",
+        "@services": "./services"
     }
 }

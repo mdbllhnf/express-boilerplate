@@ -2,6 +2,8 @@
 
 require('module-alias/register');
 
+const logger = require('@services/logger');
+
 const express = require('express');
 const app = express();
 
@@ -17,5 +19,5 @@ app.get('*', require('@controllers/not-found').index);
 
 const { port } = require('@configs/app');
 app.listen(port, () => {
-    console.log(`Server running and listening on port ${port}`);
+    logger.info(`Server running and listening on port ${port}...`);
 });
