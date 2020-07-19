@@ -19,31 +19,11 @@ npm run dev
 # Run on production
 npm start
 ```
-# Endpoints documentation
-
-## GET /
-Responds with a JSON containing a welcome message.
-
-### Parameters
-|name|type|data type|required|default|description|
-|--|--|--|--|--|--|
-|visitor|query|string|no|Anonymous|The visitor's name|
-
-### Examples
-The request:
-```sh
-curl -X 'base_url?visitor=John'
-```
-The response:
-```JSON
-{
-    "message": "Hey John ! Welcome to Express Boilerplate."
-}
-```
 
 # Author
 
 @mdbllhnf <mdbllhnf@gmail.com>
+
 Founder of [Bitweaks Solutions](https://www.bitweaks.com)
 
 # Licence

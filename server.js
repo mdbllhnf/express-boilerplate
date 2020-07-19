@@ -12,9 +12,7 @@ app.set('x-powered-by', false);
 
 app.use(express.json());
 app.use(require('cookie-parser')());
-
-app.use('/', require('@routers/welcome'));
-app.all('*', require('@controllers/not-found').index);
+app.use('/', require('@routers/all'));
 
 const { port } = require('@configs/app');
 app.listen(port, () => {

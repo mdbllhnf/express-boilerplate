@@ -2,8 +2,8 @@
 
 exports.index = (request, response) => {
     response
-        .status(404)
+        .status(200)
         .json({
-            message: 'Not Found',
+            version: 1,
         });
 };
