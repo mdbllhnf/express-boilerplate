@@ -13,7 +13,7 @@ app.use(require('cookie-parser')());
 app.set('etag', false);
 
 app.use('/', require('@routers/welcome'));
-app.get('*', require('@controllers/not-found').index);
+app.all('*', require('@controllers/not-found').index);
 
 const { port } = require('@configs/app');
 app.listen(port, () => {
