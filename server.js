@@ -7,10 +7,11 @@ const logger = require('@services/logger');
 const express = require('express');
 const app = express();
 
+app.set('etag', false);
+app.set('x-powered-by', false);
+
 app.use(express.json());
 app.use(require('cookie-parser')());
-
-app.set('etag', false);
 
 app.use('/', require('@routers/welcome'));
 app.all('*', require('@controllers/not-found').index);
