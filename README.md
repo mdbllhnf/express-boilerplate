@@ -1,6 +1,6 @@
-# Express Boilerplate
+# Expresting
 
-A fast and robust ExpressJS boilerplate for building highly scalable APIs.
+A fast, robust and minimalistic Node/Express setup for building highly scalable APIs.
 
 # Installation
 ```sh
@@ -19,12 +19,6 @@ npm run dev
 # Run on production
 npm start
 ```
-
-# Author
-
-@mdbllhnf <mdbllhnf@gmail.com>
-
-Founder of [Bitweaks Solutions](https://www.bitweaks.com)
 
 # Licence
 

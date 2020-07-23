@@ -1,16 +1,14 @@
 {
-    "name": "express-boilerplate",
+    "name": "expresting",
     "version": "0.0.1",
-    "description": "A fast and robust ExpressJS boilerplate for building highly scalable APIs.",
+    "description": "A fast, robust and minimalistic Node/Express setup for building highly scalable APIs.",
     "keywords": [
-        "boilerplate",
+        "javascript",
         "api",
         "restful",
-        "restful-api",
-        "express",
-        "express-js"
+        "express"
     ],
-    "author": "mdbllhnf",
+    "author": "mdbllhnf <mdbllhnf@gmail.com>",
     "license": "MIT",
     "main": "app.js",
     "scripts": {
