@@ -10,7 +10,7 @@
     ],
     "author": "mdbllhnf <mdbllhnf@gmail.com>",
     "license": "MIT",
-    "main": "app.js",
+    "main": "bootstrap.js",
     "scripts": {
         "dev": "nodemon -r dotenv/config .",
         "start": "node -r dotenv/config ."
@@ -31,7 +31,9 @@
         "@controllers": "./controllers",
         "@logs": "./logs",
         "@middlewares": "./middlewares",
+        "@root": "./",
         "@routers": "./routers",
-        "@services": "./services"
+        "@services": "./services",
+        "@utility": "./utility"
     }
 }
