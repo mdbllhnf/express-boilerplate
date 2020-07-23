@@ -25,8 +25,8 @@ app.use(cookieParser());
 app.use('/', routers);
 
 app.listen(port, host, () => {
-    logger.info(`Starting the app on ${host}:${port}, PID ${process.pid}`);
+    logger.general.info(`Starting the app on host ${host} and port ${port}.`);
 }).on('error', (error) => {
-    logger.error(`An error has occurred while trying to start the app on ${host}:${port}, PID ${process.pid}, ${error}.`);
+    logger.general.error(`Unable to start the app on host ${host} and port ${port}.\n${error}.`);
     process.exit(1);
 });

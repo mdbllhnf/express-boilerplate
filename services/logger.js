@@ -1,38 +1,26 @@
 'use strict'
 
-const path = require('path');
 const winston = require('winston');
-require('winston-daily-rotate-file');
+const path = require('path');
 
-const {
-    basePath,
-    fileNameFormat,
-    dateFormat,
-    maxFileSize,
-    maxFiles,
-} = require('@configs/log');
+const { env } = require('@configs/app');
 
-const logger = winston.createLogger({
-    level: 'info',
-    format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.printf(({ level, message, timestamp }) => {
-            return `${timestamp} ${level.toUpperCase()}: ${message}`;
-        }),
-    ),
+const commonLogFormat = winston.format.combine(
+    winston.format.splat(),
+    winston.format.timestamp(),
+    winston.format.printf(({ level, message, timestamp }) => {
+        return `[${timestamp}] [${level.toUpperCase()}] [${process.pid}:${env}]\n${message}\n`;
+    }),
+);
+
+exports.general = winston.createLogger({
+    level: 'debug',
+    levels: winston.config.syslog.levels,
+    format: commonLogFormat,
     transports: [
-        new winston.transports.DailyRotateFile({
-            filename: path.join(basePath, fileNameFormat),
-            datePattern: dateFormat,
-            maxSize: `${maxFileSize}m`,
-            maxFiles: `${maxFiles}d`,
+        new winston.transports.Console(),
+        new winston.transports.File({
+            filename: path.join('logs', 'general.log'),
         }),
     ],
 });
-   
-const { env } = require('@configs/app');
-if (env !== 'production') {
-    logger.add(new winston.transports.Console());
-}
-
-module.exports = logger;
