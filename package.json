@@ -16,6 +16,7 @@
         "start": "node -r dotenv/config ."
     },
     "devDependencies": {
+        "faker": "^4.1.0",
         "nodemon": "^2.0.4"
     },
     "dependencies": {
@@ -29,8 +30,10 @@
     "_moduleAliases": {
         "@configs": "./configs",
         "@controllers": "./controllers",
+        "@database": "./database",
         "@logs": "./logs",
         "@middlewares": "./middlewares",
+        "@models": "./models",
         "@root": "./",
         "@routers": "./routers",
         "@services": "./services",

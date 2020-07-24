@@ -8,6 +8,7 @@ const routers = require('@routers/all');
 const handleErrors = require('@middlewares/handle-errors');
 
 const { makeLogMessage } = require('@utility/generators');
+const { getErrorStack } = require('@utility/errors');
 
 const { port, host } = require('@configs/app');
 
@@ -30,7 +31,7 @@ app.listen(port, host, () => {
 }).on('error', (error) => {
     logger.general.info(makeLogMessage([
         `Unable to start the app on host ${host} and port ${port}.`,
-        error.stack || error,
+        getErrorStack(error),
     ]));
 });
 

@@ -2,15 +2,12 @@
 
 const logger = require('@services/logger');
 const { makeLogMessage } = require('@utility/generators');
+const { getErrorStack } = require('@utility/errors');
 
 module.exports = (error, request, response, next) => {
-    if(response.headersSent) {
-        return next(error);
-    }
-    
     logger.general.error(makeLogMessage([
         `Request from ${request.ip} to ${request.method} ${request.path}.`,
-        error.stack || error,
+        getErrorStack(error),
     ]));
 
     response
