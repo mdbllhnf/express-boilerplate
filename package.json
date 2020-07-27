@@ -31,12 +31,12 @@
         "@configs": "./configs",
         "@controllers": "./controllers",
         "@database": "./database",
+        "@helpers": "./helpers",
         "@logs": "./logs",
         "@middlewares": "./middlewares",
         "@models": "./models",
         "@root": "./",
         "@routers": "./routers",
-        "@services": "./services",
         "@utility": "./utility"
     }
 }

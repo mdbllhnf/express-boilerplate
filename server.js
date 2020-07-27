@@ -1,8 +1,8 @@
 'use strict';
 
-const logger = require('@services/logger');
-const { makeLogMessage } = require('@utility/generators');
-const { getErrorStack } = require('@utility/errors');
+const logger = require('@utility/logger');
+const { makeLogMessage } = require('@helpers/generators');
+const { getErrorStack } = require('@helpers/errors');
 
 process.on('uncaughtException', (error) => {
     logger.general.error(makeLogMessage([

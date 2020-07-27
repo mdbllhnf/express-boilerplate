@@ -2,7 +2,7 @@
 
 const faker = require('faker/locale/en');
 
-const { generateRecords } = require('@utility/generators');
+const { generateRecords } = require('@helpers/generators');
 
 const initialRecordsCount = 5;
 const users = generateRecords(initialRecordsCount, (index) => ({
