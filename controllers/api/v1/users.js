@@ -1,15 +1,17 @@
 'use strict';
 
-const UserModel = require('@models/user');
+const userModel = require('@models/user');
 
-exports.index = async (request, response, next) => {
-    try {
-        const allUsers = await UserModel.getAll();
-        response
-            .status(200)
-            .json(allUsers);
-    }
-    catch(error) {
-        next(error);
+module.exports = {
+    index: async function(request, response, next) {
+        try {
+            const allUsers = await userModel.getAll();
+            response
+                .status(200)
+                .json(allUsers);
+        }
+        catch(error) {
+            next(error);
+        }
     }
 };

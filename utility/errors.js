@@ -1,4 +1,7 @@
 'use strict';
 
-exports.getErrorStack = (error) =>
-    (error && error.stack ? error.stack : error) || 'Unspecified error';
+module.exports = {
+    getErrorStack: function(error) {
+        return (error && error.stack ? error.stack : error) || 'Unspecified error';
+    },
+};

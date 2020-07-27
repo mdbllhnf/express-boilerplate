@@ -13,14 +13,16 @@ const commonLogFormat = winston.format.combine(
     }),
 );
 
-exports.general = winston.createLogger({
-    level: 'debug',
-    levels: winston.config.syslog.levels,
-    format: commonLogFormat,
-    transports: [
-        new winston.transports.Console(),
-        new winston.transports.File({
-            filename: path.join('logs', 'general.log'),
-        }),
-    ],
-});
+module.exports = {
+    general: winston.createLogger({
+        level: 'debug',
+        levels: winston.config.syslog.levels,
+        format: commonLogFormat,
+        transports: [
+            new winston.transports.Console(),
+            new winston.transports.File({
+                filename: path.join('logs', 'general.log'),
+            }),
+        ],
+    }),
+};

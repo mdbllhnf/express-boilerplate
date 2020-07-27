@@ -2,12 +2,12 @@
 
 const express = require('express');
 
-const router = express.Router();
+const notFoundController = require('@controllers/not-found')
 
+const router = express.Router();
 router.use('/api/1', [
     require('@routers/api/v1/users'),
 ]);
-
-router.all('*', require('@controllers/not-found'));
+router.all('*', notFoundController);
 
 module.exports = router;

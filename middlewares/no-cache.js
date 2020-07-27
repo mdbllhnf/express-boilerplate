@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (request, response, next) => {
+module.exports = function(request, response, next) {
     response
         .header('Cache-Control', 'no-cache, no-store, must-revalidate')
         .header('Pragma', 'no-cache')

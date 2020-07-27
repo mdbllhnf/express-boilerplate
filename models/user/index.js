@@ -1,5 +1,6 @@
 'use strict';
 
-const { bindModels } = require('@configs/binds');
+const user = require('@models/user/user');
+const userDatabase = require('@database/fake/user');
 
-module.exports = require(`@models/user/user-${bindModels.user}`)
+module.exports = user({ userDatabase });

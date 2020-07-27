@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = (request, response, next) => {
+module.exports = function(request, response, next) {
     response
         .header('Connection', 'close');
 
