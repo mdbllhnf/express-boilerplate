@@ -12,8 +12,8 @@
     "license": "MIT",
     "main": "bootstrap.js",
     "scripts": {
-        "dev": "nodemon -r dotenv/config .",
-        "start": "node -r dotenv/config ."
+        "dev": "nodemon .",
+        "start": "node ."
     },
     "devDependencies": {
         "faker": "^4.1.0",
