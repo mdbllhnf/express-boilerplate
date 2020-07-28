@@ -5,16 +5,16 @@ const cookieParser = require('cookie-parser');
 
 const routers = require('@routers/all');
 const handleErrors = require('@middlewares/handle-errors');
-const { env } = require('@configs/app');
+const {ENV} = require('@configs/application');
 
 const application = express();
 
-if(env === 'production') {
-    application.set('etag', false);
-    application.set('x-powered-by', false);
-    application.set('trust proxy', true);
+if (ENV === 'production') {
+  application.set('etag', false);
+  application.set('x-powered-by', false);
+  application.set('trust proxy', true);
 }
-    
+
 application.use(express.json());
 application.use(cookieParser());
 application.use('/', routers);

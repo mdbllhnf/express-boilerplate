@@ -2,10 +2,10 @@
 
 const path = require('path');
 
-module.exports = {
-    basePath: path.join('storage', 'logs'),
-    minLevel: 'debug',
-    categories: [
-        'general',
-    ],
-};
+module.exports = Object.freeze({
+  BASE_PATH: path.join('storage', 'logs'),
+  MIN_LEVEL: 'debug',
+  CATEGORIES: [
+    'general',
+  ],
+});

@@ -2,7 +2,7 @@
 
 A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.
 
-> The project is under development and not ready yet for release !
+> The project is under development and not yet ready for release !
 
 # Installation
 

@@ -6,7 +6,7 @@ const notFoundController = require('@controllers/not-found')
 
 const router = express.Router();
 router.use('/api/1', [
-    require('@routers/api/v1/users'),
+  require('@routers/api/v1/users'),
 ]);
 router.all('*', notFoundController);
 

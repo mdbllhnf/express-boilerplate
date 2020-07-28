@@ -1,42 +1,42 @@
 {
-    "name": "expresting",
-    "version": "0.0.1",
-    "description": "A fast, robust and minimalistic Node/Express setup for building highly scalable APIs.",
-    "keywords": [
-        "javascript",
-        "api",
-        "restful",
-        "express"
-    ],
-    "author": "mdbllhnf <mdbllhnf@gmail.com>",
-    "license": "MIT",
-    "main": "bootstrap.js",
-    "scripts": {
-        "dev": "nodemon .",
-        "start": "node ."
-    },
-    "devDependencies": {
-        "faker": "^4.1.0",
-        "nodemon": "^2.0.4"
-    },
-    "dependencies": {
-        "cookie-parser": "^1.4.5",
-        "dotenv": "^8.2.0",
-        "express": "^4.17.1",
-        "module-alias": "^2.2.2",
-        "winston": "^3.3.3",
-        "yargs": "^15.4.1"
-    },
-    "_moduleAliases": {
-        "@configs": "./configs",
-        "@controllers": "./controllers",
-        "@database": "./database",
-        "@helpers": "./helpers",
-        "@logs": "./logs",
-        "@middlewares": "./middlewares",
-        "@models": "./models",
-        "@root": "./",
-        "@routers": "./routers",
-        "@utility": "./utility"
-    }
+  "name": "expresting",
+  "version": "1.0.0",
+  "description": "A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.",
+  "keywords": [
+    "javascript",
+    "api",
+    "restful",
+    "express"
+  ],
+  "author": "mdbllhnf <mdbllhnf@gmail.com>",
+  "license": "MIT",
+  "main": "bootstrap.js",
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node ."
+  },
+  "devDependencies": {
+    "faker": "^4.1.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "module-alias": "^2.2.2",
+    "winston": "^3.3.3",
+    "yargs": "^15.4.1"
+  },
+  "_moduleAliases": {
+    "@configs": "./configs",
+    "@controllers": "./controllers",
+    "@database": "./database",
+    "@helpers": "./helpers",
+    "@logs": "./logs",
+    "@middlewares": "./middlewares",
+    "@models": "./models",
+    "@root": "./",
+    "@routers": "./routers",
+    "@utility": "./utility"
+  }
 }

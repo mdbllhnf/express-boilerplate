@@ -6,6 +6,6 @@ const router = express.Router();
 const userController = require('@controllers/api/v1/users');
 
 router.route('/users')
-    .get(userController.index);
+  .get(userController.index);
 
 module.exports = router;
