@@ -21,11 +21,11 @@ const application = require('@root/application');
 const {PORT, HOST} = require('@configs/application');
 
 application.listen(PORT, HOST, () => {
-  logger.general.info(makeLogMessage([
+  logger.server.info(makeLogMessage([
     `Starting the server on host ${HOST} and port ${PORT}.`,
   ]));
 }).on('error', (error) => {
-  logger.general.info(makeLogMessage([
+  logger.server.info(makeLogMessage([
     `Unable to start the server on host ${HOST} and port ${PORT}.`,
     getErrorStack(error),
   ]));

@@ -5,7 +5,7 @@ const {makeLogMessage} = require('@helpers/generators');
 const {getErrorStack} = require('@helpers/errors');
 
 module.exports = function(error, request, response, next) {
-  logger.general.error(makeLogMessage([
+  logger.request.error(makeLogMessage([
     `Request from ${request.ip} to ${request.method} ${request.path}.`,
     getErrorStack(error),
   ]));
