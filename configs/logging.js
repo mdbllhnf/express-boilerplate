@@ -2,12 +2,10 @@
 
 const path = require('path');
 
-module.exports = {
-  BASE_PATH: path.join('storage', 'logs'),
-  MIN_LEVEL: 'debug',
-  CATEGORIES: [
-    'general',
-    'server',
-    'request',
-  ],
-};
+exports.BASE_PATH = path.join('storage', 'logs');
+exports.MIN_LEVEL = 'debug';
+exports.CATEGORIES = [
+  'general',
+  'server',
+  'request',
+];

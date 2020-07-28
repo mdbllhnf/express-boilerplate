@@ -8,4 +8,4 @@ module.exports = function({userDatabase}) {
   async function getAll() {
     return await userDatabase.getAll();
   }
-}
+};

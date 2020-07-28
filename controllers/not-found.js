@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(request, response) {
+exports.index = function(request, response) {
   response
     .status(404)
     .json({

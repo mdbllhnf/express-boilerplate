@@ -14,8 +14,6 @@ const users = generateRecords(initialRecordsCount, (index) => ({
   updated_at: faker.date.past(),
 }));
 
-module.exports = {
-  getAll: async function() {
-    return Promise.resolve(users);
-  },
+exports.getAll = async function() {
+  return Promise.resolve(users);
 };

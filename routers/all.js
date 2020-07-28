@@ -8,6 +8,6 @@ const router = express.Router();
 router.use('/api/1', [
   require('@routers/api/v1/users'),
 ]);
-router.all('*', notFoundController);
+router.all('*', notFoundController.index);
 
 module.exports = router;
