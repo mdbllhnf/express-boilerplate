@@ -5,7 +5,7 @@ const cookieParser = require('cookie-parser');
 
 const routers = require('@routers/all');
 const handleErrors = require('@middlewares/handle-errors');
-const {ENV} = require('@configs/application');
+const {ENV} = require('@configs/server');
 
 const application = express();
 

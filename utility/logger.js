@@ -3,7 +3,7 @@
 const winston = require('winston');
 const path = require('path');
 
-const {ENV} = require('@configs/application');
+const {ENV} = require('@configs/server');
 const {BASE_PATH, MIN_LEVEL, CATEGORIES} = require('@configs/logging');
 
 const defaultLoggerConfig = {

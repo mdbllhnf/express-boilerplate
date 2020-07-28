@@ -9,24 +9,31 @@ process.on('uncaughtException', (error) => {
     'Reached uncaughtException',
     getErrorStack(error),
   ]));
+  process.exit(1);
 });
 process.on('unhandledRejection', (error) => {
   logger.general.error(makeLogMessage([
     'Reached unhandledRejection',
     getErrorStack(error),
   ]));
+  process.exit(1);
+});
+process.on('exit', (code) => {
+  logger.server.error(makeLogMessage([
+    `Process exit with code ${code}.`,
+  ]));
 });
 
 const application = require('@root/application');
-const {PORT, HOST} = require('@configs/application');
+const {PORT, HOST} = require('@configs/server');
 
 application.listen(PORT, HOST, () => {
   logger.server.info(makeLogMessage([
-    `Starting the server on host ${HOST} and port ${PORT}.`,
+    `Starting a server on host ${HOST} and port ${PORT}.`,
   ]));
 }).on('error', (error) => {
   logger.server.info(makeLogMessage([
-    `Unable to start the server on host ${HOST} and port ${PORT}.`,
+    `Unable to start a server on host ${HOST} and port ${PORT}.`,
     getErrorStack(error),
   ]));
 });
