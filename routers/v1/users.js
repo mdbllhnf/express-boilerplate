@@ -3,7 +3,7 @@
 const express = require('express');
 const router = express.Router();
 
-const userController = require('@controllers/api/v1/users');
+const userController = require('@controllers/v1/users');
 
 router.route('/users')
   .get(userController.index);
