@@ -10,7 +10,7 @@
   ],
   "author": "mdbllhnf <mdbllhnf@gmail.com>",
   "license": "MIT",
-  "main": "bootstrap.js",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon .",
     "start": "node ."
@@ -32,6 +32,7 @@
     "@configs": "./configs",
     "@controllers": "./controllers",
     "@database": "./database",
+    "@errors": "./errors",
     "@helpers": "./helpers",
     "@logs": "./logs",
     "@middlewares": "./middlewares",

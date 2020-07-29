@@ -4,7 +4,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 
 const routers = require('@routers/all');
-const handleRequestErrors = require('@middlewares/handle-request-errors');
+const errors = require('@middlewares/errors');
 const {ENV} = require('@configs/server');
 
 const application = express();
@@ -18,6 +18,6 @@ if (ENV === 'production') {
 application.use(express.json());
 application.use(cookieParser());
 application.use('/', routers);
-application.use(handleRequestErrors);
+application.use(errors);
 
 module.exports = application;
