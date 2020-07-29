@@ -2,8 +2,6 @@
 
 A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.
 
-> The project is under development and not yet ready for release !
-
 # Installation
 
 ```sh
@@ -22,6 +20,12 @@ npm install
 # Run on development
 npm run dev
 ```
+
+# Contributing
+
+> The project is under development and not yet ready for release !
+
+Feedbacks are largely preferred, contributions will be allowed after the first release.
 
 # Licence
 
