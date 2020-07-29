@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = require('@utility/logger');
+const logger = require('@services/logger');
 const {makeLogMessage} = require('@helpers/generators');
 const {getErrorStack} = require('@helpers/errors');
 

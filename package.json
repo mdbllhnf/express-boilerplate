@@ -24,6 +24,7 @@
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "i18n": "^0.10.0",
     "module-alias": "^2.2.2",
     "winston": "^3.3.3",
     "yargs": "^15.4.1"
@@ -37,8 +38,9 @@
     "@logs": "./logs",
     "@middlewares": "./middlewares",
     "@models": "./models",
+    "@locales": "./locales",
     "@root": "./",
     "@routers": "./routers",
-    "@utility": "./utility"
+    "@services": "./services"
   }
 }

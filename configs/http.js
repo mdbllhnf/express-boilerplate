@@ -1,11 +1,11 @@
 'use strict';
 
 exports.HTTP_ERROR_MESSAGE = {
-  400: 'Bad Request',
-  401: 'Unauthorized',
-  403: 'Forbidden',
-  404: 'Not Found',
-  429: 'Too Many Requests',
-  500: 'Internal Server Error',
-  503: 'Service Unavailable',
+  400: 'bad-request',
+  401: 'unauthorized',
+  403: 'forbidden',
+  404: 'not-found',
+  429: 'too-many-requests',
+  500: 'internal-server-error',
+  503: 'service-unavailable',
 };

@@ -4,6 +4,6 @@ exports.index = function(request, response) {
   response
     .status(404)
     .json({
-      message: 'Not Found',
+      message: request.trans('http.not-found'),
     });
 };

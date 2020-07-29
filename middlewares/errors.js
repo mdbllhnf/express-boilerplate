@@ -1,6 +1,6 @@
 'use strict';
 
-const logger = require('@utility/logger');
+const logger = require('@services/logger');
 const {makeLogMessage} = require('@helpers/generators');
 const {getErrorStack} = require('@helpers/errors');
 const {HTTP_ERROR_MESSAGE} = require('@configs/http');
@@ -18,7 +18,9 @@ module.exports = function(error, request, response, next) {
   function makeErrorResponse(status, message) {
     return response
       .status(status)
-      .json({message});
+      .json({
+        message: message ? request.trans(`http.${message}`) : '',
+      });
   }
 
   function report(error) {
