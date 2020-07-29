@@ -3,10 +3,11 @@
 const faker = require('faker/locale/en');
 
 const {generateRecords} = require('@helpers/generators');
+const {paginateRecords} = require('@helpers/collections');
 
-const initialRecordsCount = 5;
-const users = generateRecords(initialRecordsCount, (index) => ({
-  id: index,
+const initialRecordsCount = 19;
+const users = generateRecords(initialRecordsCount, (id) => ({
+  id,
   key: faker.random.alphaNumeric(16),
   full_name: `${faker.name.firstName()} ${faker.name.lastName()}`,
   email: faker.internet.email(),
@@ -14,6 +15,6 @@ const users = generateRecords(initialRecordsCount, (index) => ({
   updated_at: faker.date.past(),
 }));
 
-exports.getAll = async function() {
-  return Promise.resolve(users);
+exports.paginate = async function(pagination) {
+  return Promise.resolve(paginateRecords(users, pagination));
 };

@@ -2,10 +2,10 @@
 
 module.exports = function({userDatabase}) {
   return {
-    getAll,
+    paginate,
   };
 
-  async function getAll() {
-    return await userDatabase.getAll();
+  async function paginate(pagination) {
+    return await userDatabase.paginate(pagination);
   }
 };
