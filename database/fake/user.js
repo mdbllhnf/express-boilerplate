@@ -18,3 +18,7 @@ const users = generateRecords(initialRecordsCount, (id) => ({
 exports.paginate = async function(pagination) {
   return Promise.resolve(paginateRecords(users, pagination));
 };
+
+exports.getById = async function(id) {
+  return Promise.resolve(users.find((record) => record.id === id));
+};
