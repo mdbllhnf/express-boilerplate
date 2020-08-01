@@ -5,7 +5,6 @@ const router = express.Router();
 
 const userController = require('@controllers/v1/users');
 
-router.route('/users')
-  .get(userController.index);
+router.get('/users', userController.index);
 
 module.exports = router;

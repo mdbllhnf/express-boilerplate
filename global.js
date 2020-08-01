@@ -1,6 +1,8 @@
 'use strict';
 
-exports.HTTP_ERROR_MESSAGE = {
+global.HttpError = require('@errors/http-error');
+
+global.HTTP_ERROR_SLUG = {
   400: 'bad-request',
   401: 'unauthorized',
   403: 'forbidden',

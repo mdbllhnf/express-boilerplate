@@ -1,6 +1,6 @@
 # Expresting
 
-A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.
+🛡️ A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.
 
 # Installation
 
