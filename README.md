@@ -27,6 +27,6 @@ npm run dev
 
 Feedbacks are largely preferred, contributions will be allowed after the first release.
 
-# Licence
+# License
 
-MIT
+[MIT License](https://github.com/mdbllhnf/expresting/blob/master/LICENSE)
