@@ -32,7 +32,7 @@ application.listen(PORT, HOST, () => {
     `Starting a server on host ${HOST} and port ${PORT}.`,
   ]));
 }).on('error', (error) => {
-  logger.server.info(makeLogMessage([
+  logger.server.error(makeLogMessage([
     `Unable to start a server on host ${HOST} and port ${PORT}.`,
     getErrorStack(error),
   ]));
