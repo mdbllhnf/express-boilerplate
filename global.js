@@ -1,7 +1,5 @@
 'use strict';
 
-global.HttpError = require('@errors/http-error');
-
 global.HTTP_ERROR_SLUG = {
   400: 'bad-request',
   401: 'unauthorized',

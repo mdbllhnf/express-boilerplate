@@ -1,6 +1,7 @@
 'use strict';
 
 const logger = require('@services/logger');
+const HttpError = require('@errors/http-error');
 const {makeLogMessage} = require('@helpers/generators');
 const {getErrorStack} = require('@helpers/errors');
 
