@@ -4,7 +4,12 @@ const winston = require('winston');
 const path = require('path');
 
 const {ENV} = require('@configs/server');
-const {BASE_PATH, MIN_LEVEL, CATEGORIES} = require('@configs/logging');
+const {
+  BASE_PATH,
+  MIN_LEVEL,
+  CATEGORIES,
+  TRANSPORTS,
+} = require('@configs/logging');
 
 const defaultLoggerConfig = {
   level: MIN_LEVEL,
@@ -18,16 +23,22 @@ const defaultLoggerConfig = {
   ),
 };
 
+const allTransports = {
+  console: () => new winston.transports.Console(),
+  singleFile: (basePath, category) => new winston.transports.File({
+    filename: path.join(basePath, `${category}.log`),
+  }),
+};
+
 function makeLogger(basePath, categories) {
   const logger = {};
   categories.forEach((category) => {
-    const transports = [
-      new winston.transports.File({
-        filename: path.join(basePath, `${category}.log`),
-      }),
-    ];
-    if (ENV === 'development') {
-      transports.push(new winston.transports.Console());
+    const transports = [];
+    if (TRANSPORTS[ENV].includes('console')) {
+      transports.push(allTransports.console());
+    }
+    if (TRANSPORTS[ENV].includes('single-file')) {
+      transports.push(allTransports.singleFile(basePath, category));
     }
     logger[category] = winston.createLogger({
       ...defaultLoggerConfig,
