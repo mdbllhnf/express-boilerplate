@@ -1,5 +1,7 @@
 'use strict';
 
+global.UNCAUGHT_FATAL_EXCEPTION = 1;
+
 global.HTTP_ERROR_SLUG = {
   400: 'bad-request',
   401: 'unauthorized',
@@ -9,3 +11,7 @@ global.HTTP_ERROR_SLUG = {
   500: 'internal-server-error',
   503: 'service-unavailable',
 };
+
+global.HttpError = require('@errors/http-error');
+
+global.logger = require('@services/logger');

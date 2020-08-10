@@ -10,6 +10,5 @@ exports.TRANSPORTS = {
 };
 exports.CATEGORIES = [
   'general',
-  'server',
   'request',
 ];

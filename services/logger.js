@@ -31,7 +31,11 @@ const allTransports = {
 };
 
 function makeLogger(basePath, categories) {
-  const logger = {};
+  const logger = {
+    makeMessage: (lines) =>
+      lines.reduce((previous, current) =>
+        `${previous}\n-> ${current}`, '').trim(),
+  };
   categories.forEach((category) => {
     const transports = [];
     if (TRANSPORTS[ENV].includes('console')) {
