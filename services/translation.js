@@ -2,13 +2,13 @@
 
 const i18n = require('i18n');
 
-const {LOCALE} = require('@configs/server');
+const {DEFAULT_LOCALE} = require('@configs/app');
 
 i18n.configure({
   staticCatalog: {
     en: require('@locales/en'),
   },
-  defaultLocale: LOCALE,
+  defaultLocale: DEFAULT_LOCALE,
   autoReload: true,
   updateFiles: false,
   api: {
