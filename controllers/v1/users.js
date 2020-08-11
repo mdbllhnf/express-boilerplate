@@ -18,11 +18,11 @@ exports.index = async function(request, response, next) {
 exports.show = async function(request, response, next) {
   try {
     const userId = parseInt(request.params.id);
-    if(!userId) {
+    if (!userId) {
       response.abort(400);
     }
     const user = await userModel.getById(userId);
-    if(!user) {
+    if (!user) {
       response.abort(404);
     }
     return response.json(user);
