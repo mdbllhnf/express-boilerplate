@@ -1,6 +1,6 @@
 'use strict';
 
-const application = require('@root/application');
+const application = require('@boot/application');
 const {PORT, HOST} = require('@configs/server');
 
 application.listen(PORT, HOST, () => {

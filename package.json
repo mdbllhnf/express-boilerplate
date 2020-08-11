@@ -10,7 +10,7 @@
   ],
   "author": "mdbllhnf <mdbllhnf@gmail.com>",
   "license": "MIT",
-  "main": "index.js",
+  "main": "boot/index.js",
   "scripts": {
     "dev": "nodemon .",
     "start": "node ."
@@ -30,6 +30,7 @@
     "yargs": "^15.4.1"
   },
   "_moduleAliases": {
+    "@boot": "./boot",
     "@configs": "./configs",
     "@controllers": "./controllers",
     "@database": "./database",
