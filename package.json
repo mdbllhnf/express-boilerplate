@@ -3,15 +3,16 @@
   "version": "1.0.0",
   "description": "A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.",
   "keywords": [
-    "javascript",
     "api",
-    "restful",
-    "express"
+    "express",
+    "javascript",
+    "restful"
   ],
   "author": "mdbllhnf <mdbllhnf@gmail.com>",
   "license": "MIT",
   "main": "boot/index.js",
   "scripts": {
+    "command": "node ./commands/index",
     "dev": "nodemon .",
     "start": "node ."
   },
@@ -29,6 +30,7 @@
   },
   "_moduleAliases": {
     "@boot": "./boot",
+    "@commands": "./commands",
     "@configs": "./configs",
     "@controllers": "./controllers",
     "@database": "./database",
