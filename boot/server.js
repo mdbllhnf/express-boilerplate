@@ -1,9 +1,9 @@
 'use strict';
 
-const application = require('@boot/application');
+const app = require('@boot/app');
 const {PORT, HOST} = require('@configs/server');
 
-application.listen(PORT, HOST, () => {
+app.listen(PORT, HOST, () => {
   logger.general.info(logger.makeMessage([
     `Starting a server on host ${HOST} and port ${PORT}.`,
   ]));

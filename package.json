@@ -17,11 +17,9 @@
   },
   "devDependencies": {
     "faker": "^4.1.0",
-    "lodash": "^4.17.19",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "i18n": "^0.10.0",

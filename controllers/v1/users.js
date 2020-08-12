@@ -4,12 +4,10 @@ const userModel = require('@models/user');
 
 exports.index = async function(request, response, next) {
   try {
-    const pagination = {
-      page: parseInt(request.query.page) || 1,
-      perPage: parseInt(request.query.per_page) || 5,
-    };
-    const paginatedUsers = await userModel.paginate(pagination);
-    return response.json(paginatedUsers);
+    const allUsers = await userModel.getAll();
+    return response
+      .status(200)
+      .json(allUsers);
   } catch(error) {
     next(error);
   }
