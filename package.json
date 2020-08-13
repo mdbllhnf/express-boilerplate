@@ -14,10 +14,13 @@
   "scripts": {
     "command": "node ./commands/index",
     "dev": "nodemon .",
-    "start": "node ."
+    "start": "node .",
+    "test": "mocha --recursive ./tests/*.js"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "faker": "^4.1.0",
+    "mocha": "^8.1.1",
     "nodemon": "^2.0.4"
   },
   "dependencies": {
