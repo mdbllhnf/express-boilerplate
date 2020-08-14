@@ -3,12 +3,14 @@
 const express = require('express');
 
 const notFoundController = require('@controllers/not-found');
-const usersRouter = require('@routers/v1/users');
+const publicDataRouter = require('@routers/v1/public-data');
+const privateDataRouter = require('@routers/v1/private-data');
 
 const router = express.Router();
 
 router.use('/v1', [
-  usersRouter,
+  publicDataRouter,
+  privateDataRouter,
 ]);
 
 router.all('*', notFoundController.index);
