@@ -17,9 +17,9 @@ const defaultLoggerConfig = {
   format: winston.format.combine(
     winston.format.splat(),
     winston.format.timestamp(),
-    winston.format.printf(({level, message, timestamp}) => {
-      return `[${timestamp}] [${level.toUpperCase()}] [${process.pid}:${ENV}]\n${message}\n`;
-    }),
+    winston.format.printf(({level, message, timestamp}) =>
+      `${timestamp} ${level.toUpperCase()} ${ENV.toUpperCase()}.${process.pid}\n${message}\n`
+    ),
   ),
 };
 
@@ -34,7 +34,7 @@ function makeLogger(basePath, categories) {
   const logger = {
     makeMessage: (lines) =>
       lines.reduce((previous, current) =>
-        `${previous}\n-> ${current}`, '').trim(),
+        `${previous}\n- ${current}`, '').trim(),
   };
   categories.forEach((category) => {
     const transports = [];
