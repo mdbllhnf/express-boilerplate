@@ -1,12 +1,16 @@
 {
   "name": "expresting",
   "version": "1.0.0",
-  "description": "A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.",
+  "description": "A fast, robust and minimalist Node/Express setup to help you build highly scalable APIs.",
   "keywords": [
-    "api",
-    "express",
     "javascript",
-    "restful"
+    "nodejs",
+    "expressjs",
+    "mvc",
+    "restful-api",
+    "cleanarchitecture",
+    "microservice",
+    "tdd"
   ],
   "author": "mdbllhnf <mdbllhnf@gmail.com>",
   "license": "MIT",

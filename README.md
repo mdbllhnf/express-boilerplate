@@ -1,24 +1,27 @@
 # Expresting
 
-🛡️ A fast, robust and minimalist Node/Express MVC-like setup for building highly scalable APIs.
+🛡️ A fast, robust and minimalist Node/Express setup to help you build highly scalable APIs.
 
 # Installation
 
 ```sh
-# Clone the repository
+# Clone the repository.
 git clone https://github.com/mdbllhnf/expresting.git
 
-# Go to project directory
+# Go to project directory.
 cd expresting
 
-# Create the .env file
+# Create the .env file.
 cp .env.example .env
 
-# Install the dependencies
+# Install the dependencies.
 npm install
 
-# Run on development
+# Run on development.
 npm run dev
+
+# To run the tests.
+npm run test
 ```
 
 # Contributing
